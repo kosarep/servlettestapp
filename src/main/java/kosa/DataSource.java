@@ -7,6 +7,7 @@ import java.util.HashMap;
  */
 public class DataSource {
     private HashMap<String,String> userSource;
+    private QueryExecutor queryExecutor;
 
     public DataSource() {
         userSource = new HashMap<String, String>();
@@ -29,6 +30,8 @@ public class DataSource {
     private void generateTestData() {
         userSource.put("admin", "test");
         userSource.put("user", "passUser");
+        queryExecutor = new QueryExecutor();
+        queryExecutor.doQuery("INSERT INTO login_server.users VALUES (NULL, 'elo', 'admin');");
     }
 
     public boolean nameExists(User user) {
