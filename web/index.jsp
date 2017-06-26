@@ -12,6 +12,7 @@
   </head>
   <body>
   <a href="/Login.jsp">Login</a> <br/>
-  <a href="/register.jsp">Zarejestruj</a>
+  <a href="/register.jsp">Zarejestruj</a> <br/>
+  <a href="/ip.jsp">Sprawdź lokalizację IP</a>
   </body>
 </html>
