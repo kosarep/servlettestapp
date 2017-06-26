@@ -9,8 +9,10 @@
 <html>
   <head>
     <title>Index</title>
+    <link href="nyan_cat.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+  <audio src="sound/nyan_cat.mp3" autoplay></audio>
   <a href="/Login.jsp">Login</a> <br/>
   <a href="/register.jsp">Zarejestruj</a> <br/>
   <a href="/ip.jsp">Sprawdź lokalizację IP</a>

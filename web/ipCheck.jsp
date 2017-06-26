@@ -20,10 +20,11 @@
             e.printStackTrace();
         }
     %>
-    <%
-       String result = serviceConnection.ipParameteres.getCountryName();
-    %>
-    <%=result%>
+    <%="IP: " + serviceConnection.ipParameteres.getRespIpAddress()%> <br />
+    <%="Return Code: " + serviceConnection.ipParameteres.getReturnCode()%> <br />
+    <%="Return Code Details: " + serviceConnection.ipParameteres.getReturnCodeDetails()%> <br />
+    <%="Country Name: " + serviceConnection.ipParameteres.getCountryName()%> <br />
+    <%="Country Code: " + serviceConnection.ipParameteres.getCountryCode()%> <br />
 
 </body>
 </html>

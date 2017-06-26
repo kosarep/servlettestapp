@@ -28,6 +28,7 @@ public class IpParameteres {
         return returnCode;
     }
 
+    @XmlElement(name = "ReturnCode", namespace = "http://www.webservicex.net/")
     public void setReturnCode(int returnCode) {
         this.returnCode = returnCode;
     }
@@ -36,6 +37,7 @@ public class IpParameteres {
         return respIpAddress;
     }
 
+    @XmlElement(name = "IP", namespace = "http://www.webservicex.net/")
     public void setRespIpAddress(String respIpAddress) {
         this.respIpAddress = respIpAddress;
     }
@@ -44,6 +46,7 @@ public class IpParameteres {
         return returnCodeDetails;
     }
 
+    @XmlElement(name = "ReturnCodeDetails", namespace = "http://www.webservicex.net/")
     public void setReturnCodeDetails(String returnCodeDetails) {
         this.returnCodeDetails = returnCodeDetails;
     }
@@ -61,6 +64,7 @@ public class IpParameteres {
         return countryCode;
     }
 
+    @XmlElement(name = "CountryCode", namespace = "http://www.webservicex.net/")
     public void setCountryCode(String countryCode) {
         this.countryCode = countryCode;
     }

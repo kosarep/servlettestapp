@@ -52,7 +52,7 @@ public class ServiceConnection {
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             //ipParameteres = (IpParameteres) jaxbUnmarshaller.unmarshal(in);
             ipParameteres = (IpParameteres) jaxbUnmarshaller.unmarshal(in);
-            System.out.println(ipParameteres.getCountryName());
+            //System.out.println(ipParameteres.getCountryName());
 
 
 
