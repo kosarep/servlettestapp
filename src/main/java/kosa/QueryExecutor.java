@@ -22,13 +22,22 @@ public class QueryExecutor {
             connection = DriverManager.getConnection(DBURL, DBUSER, DBPASS);
             statement = connection.createStatement();
             statement.executeUpdate(query);
+            //eq.execute(query, statement);
             statement.close();
             connection.close();
-        } catch(InstantiationException | IllegalAccessException |ClassNotFoundException | SQLException e) {
+        } catch(InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
+/*
+    public void doInsertQuery(String query) {
+        executeQuery(query, new ExecuteInsertQuery());
+    }
 
+    public void doQuery(String query) {
+        executeQuery(query, new ExecuteSelectQuery());
+    }
+*/
     public boolean isPresent(String query) {
         boolean isOrNo = true;
         try {
@@ -38,7 +47,7 @@ public class QueryExecutor {
             isOrNo = statement.executeQuery(query).first();
             statement.close();
             connection.close();
-        } catch(InstantiationException | IllegalAccessException |ClassNotFoundException | SQLException e) {
+        } catch(InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
         return isOrNo;
@@ -61,4 +70,25 @@ public class QueryExecutor {
         }
         return results;
     }
+/*
+    interface ExecuteQuery<T> {
+        T execute(String query, Statement statement) throws SQLException ;
+    }
+
+    class ExecuteSelectQuery implements ExecuteQuery<ResultSet> {
+
+        @Override
+        public ResultSet execute(String query, Statement statement) throws SQLException {
+            return statement.executeQuery(query);
+        }
+    }
+
+    class ExecuteInsertQuery implements ExecuteQuery<ResultSet> {
+
+        @Override
+        public ResultSet execute(String query, Statement statement) throws SQLException {
+            return statement.executeQuery(query);
+        }
+    }
+    */
 }
