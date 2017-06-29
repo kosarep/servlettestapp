@@ -15,7 +15,6 @@ public class MyServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String param1 = request.getParameter("param1");
-
-        out.println(param1);
+        out.println("Twoje imie to: " + param1 + ", no i super.");
     }
 }

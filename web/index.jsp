@@ -16,5 +16,15 @@
   <a href="/Login.jsp">Login</a> <br/>
   <a href="/register.jsp">Zarejestruj</a> <br/>
   <a href="/ip.jsp">Sprawdź lokalizację IP</a>
+
+
+    <form method="get" action="http://localhost:8080/test" style="text-align: center; color: aliceblue">
+      Podaj swe imie kmiocie! <br />
+      <input type="text" name="param1" /><br />
+      <input type="submit" value="Klikaj!">
+    </form>
+
+
+
   </body>
 </html>
